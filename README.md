@@ -80,6 +80,17 @@ See defaults and more info [here](tarruda/zsh-autosuggestions/blob/master/lib/co
 Just remove the config lines from `~/.zshrc` that you added during [installation](#installation). If you installed manually, then also delete `~/.zsh/zsh-autosuggestions` or wherever you installed it.
 
 
+## Known Issues
+
+### Does not seem to work in zsh v5.0.x.
+
+You might see an error like: `_zsh_autosuggest_get_suggestion:2: bad pattern: history_items=(xxxx`
+
+See issue #92
+
+**Solution:** Upgrade to v5.2.x
+
+
 ## License
 
 This project is licensed under [MIT license](http://opensource.org/licenses/MIT).
