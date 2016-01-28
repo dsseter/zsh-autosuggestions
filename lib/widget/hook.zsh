@@ -50,4 +50,8 @@ _zsh_autosuggest_hook_widgets() {
 	for widget in $ZSH_AUTOSUGGEST_ACCEPT_WIDGETS; do
 		_zsh_autosuggest_hook_widget _zsh_autosuggest_widget_accept $widget
 	done
+
+	for widget in $ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS; do
+		_zsh_autosuggest_hook_widget _zsh_autosuggest_widget_partial_accept $widget
+	done
 }

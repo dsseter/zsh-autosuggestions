@@ -37,3 +37,12 @@ ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
 	vi-forward-char
 	vi-end-of-line
 )
+
+# Widgets that accept the suggestion as far as the cursor moves
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
+	forward-word
+	vi-forward-word
+	vi-forward-word-end
+	vi-forward-blank-word
+	vi-forward-blank-word-end
+)
