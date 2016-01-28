@@ -32,6 +32,8 @@ ZSH_AUTOSUGGEST_MODIFY_WIDGETS=(
 
 # Widgets that accept the autosuggestion
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
-	vi-forward-char
 	forward-char
+	end-of-line
+	vi-forward-char
+	vi-end-of-line
 )
