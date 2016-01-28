@@ -35,11 +35,11 @@ ZLE_AUTOSUGGEST_SUSPEND_WIDGETS=(
 	backward-kill-word
 )
 
-ZLE_AUTOSUGGEST_COMPLETION_WIDGETS=(
-	complete-word expand-or-complete expand-or-complete-prefix list-choices
-	menu-complete reverse-menu-complete menu-expand-or-complete menu-select
-	accept-and-menu-complete
-)
+#ZLE_AUTOSUGGEST_COMPLETION_WIDGETS=(
+#	complete-word expand-or-complete expand-or-complete-prefix list-choices
+#	menu-complete reverse-menu-complete menu-expand-or-complete menu-select
+#	accept-and-menu-complete
+#)
 
 ZLE_AUTOSUGGEST_ACCEPT_WIDGETS=(
 	vi-forward-char forward-char vi-forward-word forward-word vi-add-eol
@@ -290,5 +290,8 @@ zle -N autosuggest-accept-line
 zle -N autosuggest-tab
 zle -N autosuggest-suspend
 zle -N autosuggest-accept-suggestion
-
+for widget in $ZLE_AUTOSUGGEST_ALL_WIDGETS; do
+       [[ -z $widgets[$widget] || ! -z $widgets[.$widget] ]] && continue
+       eval "zle -A $widget .$widget"
+done
 autosuggest-restore-widgets
