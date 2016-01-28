@@ -1,9 +1,9 @@
-# Color to use when highlighting autosuggestion
+# Color to use when highlighting suggestion
 # Uses format of `region_highlight`
 # More info: http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets
 ZSH_AUTOSUGGEST_HIGHLIGHT_COLOR='fg=8'
 
-# Widgets that clear the autosuggestion
+# Widgets that clear the suggestion
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 	history-search-forward
 	history-search-backward
@@ -14,7 +14,7 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 	accept-line
 )
 
-# Widgets that modify the autosuggestion
+# Widgets that modify the suggestion
 ZSH_AUTOSUGGEST_MODIFY_WIDGETS=(
 	complete-word
 	expand-or-complete
@@ -30,7 +30,7 @@ ZSH_AUTOSUGGEST_MODIFY_WIDGETS=(
 	bracketed-paste
 )
 
-# Widgets that accept the autosuggestion
+# Widgets that accept the entire suggestion
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
 	forward-char
 	end-of-line
