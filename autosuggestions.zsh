@@ -13,6 +13,7 @@ unset _ZSH_AUTOSUGGESTION_ACTIVE
 LIBDIR="${0:a:h}/lib"
 
 source "$LIBDIR/config.zsh"
+source "$LIBDIR/deprecated.zsh"
 source "$LIBDIR/get_suggestion.zsh"
 source "$LIBDIR/highlight.zsh"
 source "$LIBDIR/widget/widgets.zsh"
@@ -20,6 +21,9 @@ source "$LIBDIR/widget/hook.zsh"
 
 autosuggest_start() {
 	_ZSH_AUTOSUGGESTION_ACTIVE=true
+
+	# Show deprecated config warnings
+	_zsh_autosuggest_check_deprecated_config
 
 	# Register highlighter if needed to support zsh-syntax-highlighting plugin
 	if _zsh_autosuggest_syntax_highlighting_enabled; then
