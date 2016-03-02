@@ -1,1 +1,1 @@
-autosuggestions.zsh
+zsh-autosuggestions.zsh
